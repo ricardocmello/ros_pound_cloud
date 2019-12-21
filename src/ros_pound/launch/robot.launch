@@ -1,10 +1,12 @@
 <!--Example launch file for robot node -->
 <launch>
+    <!-- turtle node on robot -->
+	<node name="turtle_node" pkg="turtlesim" type="turtlesim_node" output="screen" />
 
-    <!-- ros_pound on robot -->
-	<node name="ros_pound" pkg="ros_pound" type="ros-pound" output="screen" args="--node-id 0" />
+    <!-- ros_pound (commwrapper) on robot -->
+    <node name="ros_pound" pkg="ros_pound" type="commwrapper.py" output="screen" args=" 0" />
 
     <!-- relay nodes help with the namespaces associated to pound topics -->
     <!-- A note on relay nodes: it only advertise its output once it receives something on the input -->
-  	<!--node name="topic_tools_tf"    pkg="topic_tools" type="relay" output="screen" args="/tf /R0/tf" /-->
+  	<node name="topic_tools_vel"    pkg="topic_tools" type="relay" output="screen" args="/R0/rx/R1/turtle1/cmd_vel /turtle1/cmd_vel"/>
 </launch>

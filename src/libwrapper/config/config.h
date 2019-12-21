@@ -17,6 +17,24 @@ TFTOPIC(                    "/tf",      0, "1", 11,   10, 100);
     Node 1, Cloud
 */
 
+/*  
+We want to send the pose information generated 
+by the turtlesim node at our "robot" (0) to our "cloud" (1)
+*/
+
+TOPIC(turtlesim::Pose, "/turtle1/pose", 0, "1", 100, 15, 1000);
+
+/*  
+And we want to send the velocity commands to control our "robot" (0)
+*/
+
+TOPIC(geometry_msgs::Twist, "/turtle1/cmd_vel", 1, "0", 100, 500, 1000);
+
+/*  
+Note that we can verify that the pose is published by turtlesim every 15 ms (or so) 
+but we can only estimate how frequently the teleop_key will be publishing (500 ms seems 
+reasonable for someone operating a keyboard) 
+*/
 
 
 

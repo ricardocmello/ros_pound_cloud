@@ -1,3 +1,14 @@
+# Example Branch
+This simple example should illustrate how to use the PoundCloud. We're going to open a turtlesim node in one machine (which will emulate the robot) and a teleop node in another machine (our ¨cloud¨) to remotely control the turtle. Check the config files inside libwrapper and launch files inside ros_pound for more details.
+
+In each machine, make sure to have installed this package and switched to this branch.
+
+In your "robot" machine, run on a terminal:
+`roslaunch ros_pound robot.launch`
+
+And in your "cloud" machine:
+`roslaunch ros_pound cloud.launch`
+
 # ros-pound-cloud-pkg
 This is NOT the original ros-pound package by Dr. Danilo Tardiolli, which you'll find at https://github.com/dantard/unizar-pound-ros-pkg. 
 
@@ -8,8 +19,6 @@ This is a modified version of ros-pound, the PoundCloud. The main modifications 
 * In case you want to communicate a single machine with a local IP (behind a NAT) and a remote machine with a public IP, you can use the `commwrapper.py` ROS node to stablish bidirectional communication between them before automatically initializing `ros-pound`.
 
 To install, clone this repository inside your ROS workspace and rebuild your workspace (`catkin_make`).
-
-Switch to branch 'example' to see a simple working example on how to use the PoundCloud. 
 
 Usage of the `ros-pound` node:
 `rosrun ros_pound ros-pound --node-id 0`
@@ -56,7 +65,6 @@ queue: 50
 
 rate_mbps: 54.0
 quiet: true
-```
 
 
 

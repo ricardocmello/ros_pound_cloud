@@ -1,9 +1,12 @@
 <!--Example launch file for cloud node -->
 <launch>
-    <!-- ros_pound on cloud -->
-	<node name="ros_pound" pkg="ros_pound" type="ros-pound" output="screen" args="--node-id 1" />
+    <!-- teleop on cloud -->
+	<node name="teleop_key" pkg="turtlesim" type="turtle_teleop_key" output="screen" />
+
+    <!-- ros_pound (commwrapper) on cloud -->
+    <node name="ros_pound" pkg="ros_pound" type="commwrapper.py" output="screen" args=" 1" />
 
     <!-- relay nodes help with the namespaces associated to pound topics -->
     <!-- A note on relay nodes: it only advertise its output once it receives something on the input -->
-    <!-- node name="topic_tools_vel"   pkg="topic_tools" type="relay" output="screen" args="/cmd_vel /R1/aux_cmd_vel" -->
+  	<node name="topic_tools_pose"    pkg="topic_tools" type="relay" output="screen" args="/R1/rx/R0/turtle1/pose turtle1/pose"/>
 </launch>

@@ -532,8 +532,8 @@ void tx_loop(){
             if (1){
                 //if ( (!use_discard) || txe.deadline == 0 || age < txe.deadline){
 
-                std::cout << "<<<<<<< [DEBUG] TX: node_ip: "<< node_ip[next_hop].as<std::string>().c_str() << std::endl;
-                std::cout << "<<<<<<< [DEBUG] TX: node_port: "<< node_port_rx[next_hop].as<int>() << std::endl;
+                //std::cout << "<<<<<<< [DEBUG] TX: node_ip: "<< node_ip[next_hop].as<std::string>().c_str() << std::endl;
+                //std::cout << "<<<<<<< [DEBUG] TX: node_port: "<< node_port_rx[next_hop].as<int>() << std::endl;
                 // std::cout << "<<<<<<< [DEBUG] node_ip[next_hop].as<std::string>().c_str(): "<< node_ip[next_hop].as<std::string>().c_str() << std::endl;
                 int address = htonl(ntohl(inet_addr(node_ip[next_hop].as<std::string>().c_str())));
                 txservaddr.sin_addr.s_addr = address;

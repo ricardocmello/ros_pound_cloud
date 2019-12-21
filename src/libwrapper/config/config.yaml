@@ -1,4 +1,8 @@
-node_ip: {0: 127.0.0.1, 1: 127.0.0.1}
+# You must always verify the IP addresses of the machines you're working with
+node_ip: {0: 192.168.1.130, 1: 192.168.1.241}
+# Also, check if the ports are not blocked by your ISP/cloud provider/IT guy
+# blocked udp ports are the usual suspect when things are not working;
+# you can test this with a command such as "sudo nmap -sTU -O [DEST_IP]" 
 node_port_rx: {0: 26000, 1: 26001}
 node_port_tx: {0: 26500, 1: 26501}
 
