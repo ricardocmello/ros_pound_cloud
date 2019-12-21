@@ -1,0 +1,11 @@
+node_ip: {0: 127.0.0.1, 1: 127.0.0.1}
+node_port_rx: {0: 26000, 1: 26001}
+node_port_tx: {0: 26500, 1: 26501}
+
+feedback: false
+auto_tuning: false
+
+queue: 50
+
+rate_mbps: 54.0
+quiet: true

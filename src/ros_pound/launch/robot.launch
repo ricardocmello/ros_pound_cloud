@@ -1,0 +1,10 @@
+<!--Example launch file for robot node -->
+<launch>
+
+    <!-- ros_pound on robot -->
+	<node name="ros_pound" pkg="ros_pound" type="ros-pound" output="screen" args="--node-id 0" />
+
+    <!-- relay nodes help with the namespaces associated to pound topics -->
+    <!-- A note on relay nodes: it only advertise its output once it receives something on the input -->
+  	<!--node name="topic_tools_tf"    pkg="topic_tools" type="relay" output="screen" args="/tf /R0/tf" /-->
+</launch>
