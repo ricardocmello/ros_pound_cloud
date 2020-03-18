@@ -39,7 +39,7 @@ class CommWrapper():
     def read_file(self):
         print("In read_file()")
         parent_path = os.path.dirname(__file__)
-        config_path = parent_path.replace('ros_pound','') + "libwrapper/config/config.yaml"
+        config_path = parent_path[:-9] + "libwrapper/config/config.yaml"
         stream = open(config_path, 'r')
         print("Path: {}".format(stream))
         self.file_content = yaml.load(stream)
