@@ -140,7 +140,7 @@ class CommWrapper():
 
         print(self.file_content)
         parent_path = os.path.dirname(__file__)
-        config_path = parent_path.replace('ros_pound','') + "libwrapper/config/config.yaml"
+        config_path = parent_path[:-9] + "libwrapper/config/config.yaml"
         with open(config_path,'w') as stream: 
             print(self.file_content)
             yaml.dump(self.file_content, stream)
