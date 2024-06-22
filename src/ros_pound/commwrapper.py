@@ -74,7 +74,7 @@ class CommWrapper():
         return True
 
     def start_comm(self, condition):
-        message = "Start"
+        message = b"Start"
         print(message)
         if self.node_id == 0:
             self.sock_rx.settimeout(1)
